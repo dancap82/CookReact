@@ -2,7 +2,7 @@ import Logo from "../assets/logo.png"
 
 const NavBar=()=>{
     return(
-        <nav className="bg-zinc-200 shadow-md sticky">
+        <nav className="backgroundNav">
 
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 ">
             <div className="flex content-center">

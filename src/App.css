@@ -3,3 +3,7 @@
   padding: 0;
   box-sizing: border-box ;
 }
+
+.backgroundNav{
+  background-image: url(../src/assets/NavBg.png);
+}
