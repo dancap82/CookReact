@@ -1,5 +1,6 @@
 import Logo from "../assets/logo.png"
 
+
 const NavBar=()=>{
     return(
         <nav className="backgroundNav">
