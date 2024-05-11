@@ -7,7 +7,7 @@ function Hero(props){
            
         <img src={HeroImg} className="HeroImg h-112 md:bg-fixed" />
         
-        <button className="custom-button "> Learn more</button>
+        <button className="custom-button hero"> Learn more</button>
         </div>
       
     )

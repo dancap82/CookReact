@@ -8,14 +8,17 @@
   background-image: url(../src/assets/NavbarBG.svg);
 }
 
+/*HERO SECTION*/
+
 .HeroImg{
   width: 100%;
   max-height: 550px;
 }
 
 .hero-container{
-  position:absolute;
+  position:relative;
   display:flex;
+  z-index:1;
 }
 
 .custom-button {
@@ -25,9 +28,7 @@
   font-weight: bold;
   color: white;
   background-color: #DF5500; /* Orange-600 */
-  position:absolute; 
-  top: 86%; 
-  left: 37%;
+  
   box-shadow:3px ;
   box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.5)
 
@@ -42,4 +43,25 @@
   box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.5); /* Dark:focus:ring-yellow-900 */
 }
 
+.custom-button.hero{
+  position:absolute; 
+  top: 86%; 
+  left: 37%;
+}
 
+/*FEATURED SECTION*/
+
+.h2-featured{
+ 
+  margin-top:5%;
+}
+
+.featured-section{
+ 
+  margin-left:20%;
+  margin-right:20%;
+}
+
+.cards-container{
+  display:flex;
+}
