@@ -12,3 +12,34 @@
   width: 100%;
   max-height: 550px;
 }
+
+.hero-container{
+  position:absolute;
+  display:flex;
+}
+
+.custom-button {
+  outline: none;
+  padding:10px;
+  border-radius:20px;
+  font-weight: bold;
+  color: white;
+  background-color: #DF5500; /* Orange-600 */
+  position:absolute; 
+  top: 86%; 
+  left: 37%;
+  box-shadow:3px ;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.5)
+
+}
+.custom-button:hover {
+  background-color:#98C357; /* Lime-500 */
+}
+.custom-button:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Ring-4, Ring-lime-500 */
+}
+.custom-button.dark:focus {
+  box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.5); /* Dark:focus:ring-yellow-900 */
+}
+
+

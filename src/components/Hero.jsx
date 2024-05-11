@@ -1,8 +1,15 @@
 import HeroImg from "../assets/HeroBG.svg"
 
-function Hero(){
+
+function Hero(props){
     return(
-        <img src={HeroImg} className="HeroImg h-112" />
+        <div className="hero-container">
+           
+        <img src={HeroImg} className="HeroImg h-112 md:bg-fixed" />
+        
+        <button className="custom-button "> Learn more</button>
+        </div>
+      
     )
 }
 export default Hero;
