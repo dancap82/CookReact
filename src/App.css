@@ -64,4 +64,29 @@
 
 .cards-container{
   display:flex;
+  ;
+}
+
+.second-card{
+  margin-left:1.5rem;
+}
+
+/*WHOLE LIST SECTION*/
+
+.display-section{
+
+  background-color: #EBEBEB;
+  margin-top:5%;
+}
+
+.h2-Display{
+  margin-left:20%; 
+  padding-top:5%;
+}
+.display-container{
+  margin-left:20%;
+  margin-right:20%;
+  
+ 
+  display:flex;
 }
