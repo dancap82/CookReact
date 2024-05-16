@@ -1,4 +1,5 @@
 import Logo from "../assets/logo.png"
+import {Link} from "react-router-dom"
 
 
 const NavBar=()=>{
@@ -11,7 +12,7 @@ const NavBar=()=>{
             <div className="flex ml-20  md:visible">
             <ul className="flex self-center no-wrap space-x-8 hidden md:inline-flex font-semibold text-lg">
                 <li class="hover:text-purple-700">
-                    <a href="#">Home </a>
+                    <Link to="/">Home </Link>
                 </li>
                 <li className="hover:text-purple-700">
                     <a href="#">Recipees </a>

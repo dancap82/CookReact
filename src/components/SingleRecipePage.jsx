@@ -1,4 +1,14 @@
-function SingleRecipePage() {
+import { useParams } from 'react-router-dom';
+
+
+function SingleRecipePage({recipes}) {
+
+    // Access the recipe ID from the URL parameters
+    const { id } = useParams();
+
+    // Find the recipe with the matching ID
+    const recipe = recipes.find(recipe => recipe.id === id);
+    
     return (
       <div>
         <div className="container lg:flex">

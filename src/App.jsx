@@ -16,6 +16,7 @@ function App() {
  })
  
  const[recipes, setRecipes]=useState([])
+//  const [recipeLinks, setRecipeLinks] = useState([]);
 
  useEffect(()=>{
   const fetchContent = async () => {
@@ -25,12 +26,18 @@ function App() {
       const response = await client.getEntries({
        content_type: "cookbook"
        });
-
+       //trying creating ids for the links
+      //  const recipeIds = response.items.map(recipe => recipe.sys ? recipe.sys.id : null);
+      //  const singleRecipePageBaseUrl = '/SingleRecipePage/';
+      //  const links = recipeIds.map(recipeId => `${singleRecipePageBaseUrl}${recipeId}`);
       
    
     console.log(response.items)
     
    setRecipes(response.items);
+  //  setRecipeLinks(links);
+   console.log(links);
+
     } catch (error) {
       console.error('Error fetching content:', error);
     }
@@ -53,6 +60,7 @@ console.log(recipes)
             <Layout
               recipes={recipes}
               setRecipes={setRecipes}
+              // recipeLinks={recipeLinks}
             />
           }
         >
