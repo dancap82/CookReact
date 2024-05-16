@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Featured from './components/Featured';
 import DisplayWhole from './components/DisplayWhole';
 import { createClient } from 'contentful';
+import OneRecipe from './components/OneRecipe';
 
 const App = () => {
   const [recipes, setRecipes] = useState([]);
@@ -36,6 +37,7 @@ const App = () => {
       <Hero />
       <Featured recipes={recipes} />
       <DisplayWhole recipes={recipes} />
+      {recipes.length > 0 && <OneRecipe recipes={recipes} />}
     </div>
   );
 };
