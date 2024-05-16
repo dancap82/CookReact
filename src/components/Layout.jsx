@@ -5,10 +5,13 @@ import NavBar from "./NavBar"
 
 
 function Layout(){
+    const { data, error, isLoading } = useContentful({
+        contentType: 'Cookbook',
+      });
     return(
         <div>
-            <NavBar />
-             <Outlet />
+            <NavBar/>
+             <Outlet  data={data} />
         
       
           </div>

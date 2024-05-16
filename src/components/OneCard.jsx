@@ -1,10 +1,15 @@
-function OneCard({image,title,style}){
+function OneCard({image, title, style}){
+    // const image = recipe.fields.image.fields.file.url;
+    // const title = recipe.fields.title;
+    // const shortDescription = recipe.fields.shortdescription;
+
     return(
         <div className="mt-20 max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 transition ease-in-out hover:-translate-y-1 hover:scale-105" style={style}>
                     <a href="#">
-                        <img class="rounded-t-lg" src={image} alt="" />
+                        <img class="rounded-t-lg" src={image}  alt="" />
                     </a>
                     <span style={{ fontSize: '1.25rem', fontWeight: 'bold', marginLeft:"1.5rem"  }}>{title}</span>
+                    
                   <div className="p-5">
                         <a href="#" className="custom-button inline-flex items-center px-3 py-2 text-sm ">
                             Read more

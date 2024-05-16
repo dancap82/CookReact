@@ -1,13 +1,21 @@
 import Hero from "./Hero"
 import Featured from "./Featured"
 import DisplayWhole from "./DisplayWhole"
+import OneCard from "./OneCard"
 
-function Homepage() {
+function Homepage({recipes}) {
+    
+    
+    
     return (
       <div>
-       <Hero />
-       <Featured />
-       <DisplayWhole />
+        <Hero />
+        {/* {recipes.map(recipe => (
+                <OneCard key={recipe.sys.id} recipe={recipe} />
+            ))} */}
+       
+       <Featured recipes={recipes} />
+       <DisplayWhole recipes={recipes} />
         
       </div>
     )
