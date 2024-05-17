@@ -1,7 +1,7 @@
 import HeroImg from "../assets/HeroBG.svg"
 
 
-function Hero(props){
+function Hero(){
     return(
         <div className="hero-container">
            
