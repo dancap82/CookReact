@@ -1,6 +1,6 @@
 import OneCard from '../components/OneCard';
 
-const DisplayWhole = ({ recipes }) => {
+const DisplayWhole = ({ recipes, showRecipe }) => {
   return (
     <div className="display-section flex flex-col items-center justify-center">
       <h2 className="h2-Display text-3xl font-bold dark:text-white">
@@ -8,7 +8,13 @@ const DisplayWhole = ({ recipes }) => {
       </h2>
       <div className="display-container">
         {recipes.map(recipe => (
-          <OneCard key={recipe.sys.id} id={recipe.sys.id} image={recipe.fields.image.fields.file.url} title={recipe.fields.title} style={{ maxWidth: '20rem' }} />
+          <OneCard 
+            key={recipe.sys.id} 
+            image={recipe.fields.image.fields.file.url} 
+            title={recipe.fields.title} 
+            style={{ maxWidth: '20rem' }} 
+            showRecipe={showRecipe} // Pass the showRecipe function
+          />
         ))}
       </div>
     </div>

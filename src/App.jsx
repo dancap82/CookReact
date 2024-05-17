@@ -9,6 +9,7 @@ import OneRecipe from './components/OneRecipe';
 
 const App = () => {
   const [recipes, setRecipes] = useState([]);
+  const [showOneRecipe, setShowOneRecipe] = useState(false);
 
   useEffect(() => {
     const client = createClient({
@@ -31,13 +32,21 @@ const App = () => {
     fetchRecipes();
   }, []);
 
+  const showRecipe = () => {
+    setShowOneRecipe(true); // Show OneRecipe when this function is called
+  };
+
   return (
     <div>
-      <NavBar />
-      <Hero />
-      <Featured recipes={recipes} />
-      <DisplayWhole recipes={recipes} />
-      {recipes.length > 0 && <OneRecipe recipes={recipes} />}
+      {!showOneRecipe && (
+        <>
+          <NavBar />
+          <Hero />
+          <Featured recipes={recipes} showRecipe={showRecipe}/>
+          <DisplayWhole recipes={recipes} showRecipe={showRecipe} />
+        </>
+      )}
+      {showOneRecipe && recipes.length > 0 && <OneRecipe recipes={recipes} />}
     </div>
   );
 };

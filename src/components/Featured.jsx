@@ -1,6 +1,6 @@
 import OneCard from '../components/OneCard';
 
-const Featured = ({ recipes }) => {
+const Featured = ({ recipes, showRecipe }) => {
 
 const featuredRecipes = recipes.slice(0, 2);
 
@@ -11,7 +11,7 @@ const featuredRecipes = recipes.slice(0, 2);
       </h2>
       <div className="cards-container">
         {featuredRecipes.map(recipe => (
-          <OneCard key={recipe.sys.id} id={recipe.sys.id} image={recipe.fields.image.fields.file.url} title={recipe.fields.title} />
+          <OneCard key={recipe.sys.id} id={recipe.sys.id} image={recipe.fields.image.fields.file.url} title={recipe.fields.title} showRecipe={showRecipe}/>
         ))}
       </div>
     </div>
