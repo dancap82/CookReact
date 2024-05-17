@@ -10,6 +10,7 @@ import OneRecipe from './components/OneRecipe';
 const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [showOneRecipe, setShowOneRecipe] = useState(false);
+  const [selectedRecipeIndex, setSelectedRecipeIndex] = useState(null);
 
   useEffect(() => {
     const client = createClient({
@@ -32,7 +33,8 @@ const App = () => {
     fetchRecipes();
   }, []);
 
-  const showRecipe = () => {
+  const showRecipe = (index) => {
+    setSelectedRecipeIndex(index); // Set the index of the selected recipe
     setShowOneRecipe(true); // Show OneRecipe when this function is called
   };
 
@@ -42,11 +44,13 @@ const App = () => {
         <>
           <NavBar />
           <Hero />
-          <Featured recipes={recipes} showRecipe={showRecipe}/>
+          <Featured recipes={recipes} showRecipe={showRecipe} />
           <DisplayWhole recipes={recipes} showRecipe={showRecipe} />
         </>
       )}
-      {showOneRecipe && recipes.length > 0 && <OneRecipe recipes={recipes} />}
+      {showOneRecipe && selectedRecipeIndex !== null && (
+        <OneRecipe recipe={recipes[selectedRecipeIndex]} />
+      )}
     </div>
   );
 };

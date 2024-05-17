@@ -7,13 +7,13 @@ const DisplayWhole = ({ recipes, showRecipe }) => {
         Explore<span className="underline underline-offset-3 decoration-8 decoration-lime-600 dark:decoration-green-600"> all the recipes</span>
       </h2>
       <div className="display-container">
-        {recipes.map(recipe => (
+        {recipes.map((recipe, index) => (
           <OneCard 
             key={recipe.sys.id} 
             image={recipe.fields.image.fields.file.url} 
             title={recipe.fields.title} 
             style={{ maxWidth: '20rem' }} 
-            showRecipe={showRecipe} // Pass the showRecipe function
+            onClick={() => showRecipe(index)} // Pass the index to showRecipe
           />
         ))}
       </div>

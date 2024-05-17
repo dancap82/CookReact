@@ -1,7 +1,7 @@
-function OneCard({ image, title, style, showRecipe }) {
+function OneCard({ image, title, style, onClick }) {
   const handleClick = (event) => {
     event.preventDefault(); // Prevent default behavior of the link
-    showRecipe(); // Trigger the showRecipe function passed from parent component
+    onClick(); // Trigger the onClick function passed from parent component
   };
 
   return (
