@@ -1,5 +1,6 @@
-import Rec1 from "../assets/Rec1_Bowl.png"
+import {Link} from "react-router-dom"
 import OneCard from "../components/OneCard"
+
 
 function Featured({recipes}){
     const featuredRecipes = recipes.slice(0, 2);
@@ -9,8 +10,16 @@ function Featured({recipes}){
             
             <div className="cards-container">
             {featuredRecipes.map(recipe => (
-          <OneCard key={recipe.sys.id} image={recipe.fields.image.fields.file.url} title={recipe.fields.title} style={{ marginLeft: '1.5rem', bgColor:"#EBEBEB" }}  />
+               <Link key={recipe.sys.id} to={`/recipe/${recipe.sys.id}`}>
+                 <OneCard key={recipe.sys.id} 
+                   image={recipe.fields.image.fields.file.url} 
+                   title={recipe.fields.title} 
+                   style={{ marginLeft: '1.5rem', bgColor:"#EBEBEB" }}  
+                   />
+
+                </Link>
         ))}
+        
                 {/* <OneCard image={Rec1} title="Healthy Bowl" />
                 <OneCard image={Rec1} title="Healthy Bowl" style={{ marginLeft: '1.5rem' }}  /> */}
             </div>
