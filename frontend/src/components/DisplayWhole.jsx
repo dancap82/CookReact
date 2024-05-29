@@ -9,9 +9,9 @@ const DisplayWhole = ({ recipes, showRecipe }) => {
       <div className="display-container">
         {recipes.map((recipe, index) => (
           <OneCard 
-            key={recipe.sys.id} 
-            image={recipe.fields.image.fields.file.url} 
-            title={recipe.fields.title} 
+            key={recipe.id} 
+            image={recipe.image} 
+            title={recipe.title} 
             style={{ maxWidth: '20rem' }} 
             onClick={() => showRecipe(index)} // Pass the index to showRecipe
           />

@@ -42,8 +42,8 @@ const App = () => {
 
 
   const [recipes, setRecipes] = useState([]);
-  const [showOneRecipe, setShowOneRecipe] = useState(false);
   const [selectedRecipeIndex, setSelectedRecipeIndex] = useState(null);
+  const [showOneRecipe, setShowOneRecipe] = useState(false);
   const [error, setError] = useState('');
 
   useEffect(() => {
