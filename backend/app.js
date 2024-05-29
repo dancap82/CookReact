@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 require('dotenv').config();
 
 const { getPgVersion } = require('./DB/dbConnection');
@@ -9,6 +10,7 @@ const { getAllRecipes, getOneRecipes } = require('./controllers/userControllers'
 const PORT = process.env.BACK_END || 8000;
 
 getPgVersion();
+app.use(cors());
 
 app.use(express.json());
 

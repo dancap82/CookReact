@@ -8,11 +8,11 @@ import { createClient } from 'contentful';
 import OneRecipe from './components/OneRecipe';
 
 const App = () => {
-  const [recipes, setRecipes] = useState([]);
+/*   const [recipes, setRecipes] = useState([]);
   const [showOneRecipe, setShowOneRecipe] = useState(false);
-  const [selectedRecipeIndex, setSelectedRecipeIndex] = useState(null);
+  const [selectedRecipeIndex, setSelectedRecipeIndex] = useState(null); */
 
-  useEffect(() => {
+/*   useEffect(() => {
     const client = createClient({
       accessToken: import.meta.env.VITE_APP_CONTENTFUL_ACCESS_TOKEN,
       space: import.meta.env.VITE_APP_CONTENTFUL_SPACE_ID
@@ -33,15 +33,36 @@ const App = () => {
     fetchRecipes();
   }, []);
 
+   */
+
   const showRecipe = (index) => {
     setSelectedRecipeIndex(index); // Set the index of the selected recipe
     setShowOneRecipe(true); // Show OneRecipe when this function is called
   };
 
+
+  const [recipes, setRecipes] = useState([]);
+  const [showOneRecipe, setShowOneRecipe] = useState(false);
+  const [selectedRecipeIndex, setSelectedRecipeIndex] = useState(null);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    fetch('http://localhost:8000/recipes')
+      .then((response) => response.json())
+      .then((data) => {
+        setRecipes(data);
+        console.log(data); // Log the fetched data here
+      })
+      .catch((error) => setError(error));
+  }, []);
+
+
+
+
   return (
     <div>
-      {!showOneRecipe && (
-        <>
+  {!showOneRecipe && (
+        <> 
           <NavBar />
           <Hero />
           <Featured recipes={recipes} showRecipe={showRecipe} />
@@ -50,7 +71,7 @@ const App = () => {
       )}
       {showOneRecipe && selectedRecipeIndex !== null && (
         <OneRecipe recipe={recipes[selectedRecipeIndex]} />
-      )}
+      )} 
     </div>
   );
 };

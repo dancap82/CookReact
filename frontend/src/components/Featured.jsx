@@ -12,9 +12,9 @@ const Featured = ({ recipes, showRecipe }) => {
       <div className="flex flex-row space-x-4">
         {featuredRecipes.map((recipe, index) => (
           <OneCard 
-            key={recipe.sys.id} 
-            image={recipe.fields.image.fields.file.url} 
-            title={recipe.fields.title} 
+            key={recipe.id} 
+            image={recipe.image} 
+            title={recipe.title} 
             style={{ maxWidth: '20rem' }} 
             onClick={() => showRecipe(index)} // Pass the index to showRecipe
           />
