@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box ;
+}
+
+.backgroundNav{
+  background-image: url(../src/assets/NavbarBG.svg);
+}
+
+/*HERO SECTION*/
+
+.HeroImg{
+  width: 100%;
+  max-height: 550px;
+}
+
+.hero-container{
+  position:relative;
+  display:flex;
+  z-index:1;
+}
+
+.custom-button {
+  outline: none;
+  padding:10px;
+  border-radius:20px;
+  font-weight: bold;
+  color: white;
+  background-color: #DF5500; /* Orange-600 */
+  
+  box-shadow:3px ;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.5)
+
+}
+.custom-button:hover {
+  background-color:#98C357; /* Lime-500 */
+}
+.custom-button:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Ring-4, Ring-lime-500 */
+}
+.custom-button.dark:focus {
+  box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.5); /* Dark:focus:ring-yellow-900 */
+}
+
+.custom-button.hero{
+  position:absolute; 
+  top: 86%; 
+  left: 37%;
+}
+
+/*FEATURED SECTION*/
+
+.h2-featured{
+ 
+  margin-top:5%;
+}
+
+.featured-section{
+ 
+  margin-left:20%;
+  margin-right:20%;
+}
+
+.cards-container{
+  display:flex;
+  ;
+}
+
+.second-card{
+  margin-left:1.5rem;
+}
+
+/*WHOLE LIST SECTION*/
+
+.display-section{
+
+  background-color: #EBEBEB;
+  margin-top:5%;
+}
+
+.h2-Display{
+  padding-top:5%;
+}
+.display-container{
+  margin-left:auto;
+  margin-right:auto;
+  
+ 
+  display:flex;
+}
