@@ -8,32 +8,7 @@ import { createClient } from 'contentful';
 import OneRecipe from './components/OneRecipe';
 
 const App = () => {
-/*   const [recipes, setRecipes] = useState([]);
-  const [showOneRecipe, setShowOneRecipe] = useState(false);
-  const [selectedRecipeIndex, setSelectedRecipeIndex] = useState(null); */
 
-/*   useEffect(() => {
-    const client = createClient({
-      accessToken: import.meta.env.VITE_APP_CONTENTFUL_ACCESS_TOKEN,
-      space: import.meta.env.VITE_APP_CONTENTFUL_SPACE_ID
-    });
-
-    const fetchRecipes = async () => {
-      try {
-        const entries = await client.getEntries({
-          content_type: 'cookbook'
-        });
-        setRecipes(entries.items);
-        console.log('Fetched recipes:', entries.items); // Log the fetched recipes
-      } catch (error) {
-        console.error('Error fetching recipes:', error);
-      }
-    };
-
-    fetchRecipes();
-  }, []);
-
-   */
 
   const showRecipe = (index) => {
     setSelectedRecipeIndex(index); // Set the index of the selected recipe
