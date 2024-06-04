@@ -22,7 +22,7 @@ const App = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:8000/recipes')
+    fetch('https://cookreact-4plq.onrender.com/recipes')
       .then((response) => response.json())
       .then((data) => {
         setRecipes(data);
